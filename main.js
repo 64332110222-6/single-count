@@ -3,18 +3,22 @@
 // กด C จะ reset เลขเป็น 0
 const counter = document.querySelector(".counter");
 let count = 0;
-document.querySelector(".btn-inc").onclick = function(){
+let plus = document.querySelector(".btn-inc")
+let minus = document.querySelector(".btn-dec")
+let clear = document.querySelector(".btn-clr")
+let number = document.querySelector(".number")
+plus.onclick = function(){
     count++;
-    document.querySelector(".number").innerText = count;
+    number.innerText = count;
 }
-document.querySelector(".btn-dec").onclick = function(){
+minus.onclick = function(){
     count--;
     if(count<0){
         count = 0;
     }
-    document.querySelector(".number").innerText = count;
+    number.innerText = count;
 }
-document.querySelector(".btn-clr").onclick = function(){
+clear.onclick = function(){
     count = 0;
-    document.querySelector(".number").innerText = count;
+    number.innerText = count;
 }
